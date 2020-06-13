@@ -45,7 +45,7 @@ const AddTrip = ({newTrip}) => {
           <br />
           <select ref={(input) => (type = input)}>
             <option value="Trek">Trek</option>
-            <option value="Club">TClubk</option>
+            <option value="Club">Club</option>
           </select>
         </label>
         <input type="submit" value="SUBMIT"/>

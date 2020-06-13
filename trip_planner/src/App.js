@@ -2,6 +2,7 @@ import React from "react";
 import Nav from "./components/Nav";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import AddTrip from "./components/trip/AddTrip";
+import TripList from "./components/trip/TripList";
 
 class App extends React.Component {
   constructor(props) {
@@ -27,7 +28,13 @@ class App extends React.Component {
           <Switch>
             <Route
               path="/add"
-              render={() => <AddTrip {...this.props} newTrip={this.addTrip} />}
+              render={(props) => <AddTrip {...props} newTrip={this.addTrip} />}
+            />
+            <Route
+              path="/list"
+              render={(props) => (
+                <TripList {...props} trips={this.state.allTrips} />
+              )}
             />
           </Switch>
         </div>
